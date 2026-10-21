@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C2.2 — Class 7 | Vocabulary in Action</title>
+</head>
+<body style="margin:0;background:#f3f6fa;font-family:Arial,Helvetica,sans-serif;color:#243447;line-height:1.55;">
+<div style="max-width:1100px;margin:0 auto;padding:24px 16px 40px;box-sizing:border-box;">
+  <header style="background:#1a3d63;color:#fff;border-radius:18px;padding:28px 24px;margin-bottom:22px;">
+    <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85;">Pharo English Academy · C2.2</div>
+    <h1 style="font-size:clamp(26px,4vw,38px);line-height:1.15;margin:10px 0 8px;">Class 7 — Vocabulary in Action</h1>
+    <p style="margin:0;max-width:760px;color:#eaf1f8;">Review the expressions from Classes 1–6, then use them to discuss challenging professional situations.</p>
+  </header>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:16px;padding:22px;margin-bottom:22px;">
+    <h2 style="margin:0 0 8px;color:#1a3d63;font-size:24px;">Part 1 · Theory and vocabulary</h2>
+    <p style="margin-top:0;">Review the meaning of each expression before starting the speaking activity. Meanings are concise English explanations to encourage learning through context.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;">
+      <button id="showIdioms" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:10px 16px;font-weight:bold;cursor:pointer;">Idioms (19)</button>
+      <button id="showPhrasals" type="button" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:10px 16px;font-weight:bold;cursor:pointer;">Phrasal verbs (15)</button>
+      <input id="searchVocab" type="search" placeholder="Search an expression or meaning…" aria-label="Search vocabulary" style="flex:1;min-width:220px;border:1px solid #cbd5e1;border-radius:999px;padding:10px 14px;font:inherit;">
+    </div>
+    <div id="vocabList" aria-live="polite"></div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:16px;padding:22px;margin-bottom:22px;">
+    <h2 style="margin:0 0 8px;color:#1a3d63;font-size:24px;">Part 2 · Random speaking challenge</h2>
+    <p style="margin-top:0;">Click <strong>Generate question</strong>. Each round randomly selects a discussion question, one phrasal verb, and one idiom from the course inventory. Use both expressions in your answer.</p>
+    <div style="background:#eef4fa;border-left:4px solid #1a3d63;border-radius:8px;padding:14px 16px;margin:16px 0;">
+      <strong>Instructions</strong>
+      <ol style="margin:8px 0 0;padding-left:22px;">
+        <li>Read the question and the two required expressions.</li>
+        <li>Answer in complete sentences and use both expressions naturally.</li>
+        <li>Explain your reasoning and give a specific example where possible.</li>
+        <li>There is no model answer for the random questions: produce your own response.</li>
+      </ol>
+    </div>
+    <div style="border:1px solid #cbd9e8;border-radius:12px;padding:16px 18px;margin:16px 0;background:#fbfdff;">
+      <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#61758a;font-weight:bold;">Worked example · How to do the task</div>
+      <h3 style="font-size:19px;line-height:1.4;margin:8px 0 12px;color:#1a3d63;">Question: Your manager supports a decision you strongly disagree with. What would you do?</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px;margin-bottom:12px;">
+        <div style="background:#eef4fa;border-radius:9px;padding:11px 13px;"><div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#526579;font-weight:bold;">Phrasal verb to use</div><strong style="color:#1a3d63;font-size:17px;">iron out</strong></div>
+        <div style="background:#f2f0fb;border-radius:9px;padding:11px 13px;"><div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#665b8d;font-weight:bold;">Idiom to use</div><strong style="color:#44366b;font-size:17px;">rock the boat</strong></div>
+      </div>
+      <div style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#61758a;font-weight:bold;">Example response</div>
+      <p style="margin:6px 0 0;">“I would try to <strong>iron out</strong> our differences in a private conversation first. If the decision could seriously harm the team, I would be willing to <strong>rock the boat</strong> and explain my concerns respectfully.”</p>
+      <p style="margin:10px 0 0;color:#526579;font-size:13px;">Notice: the response uses both required expressions naturally. The random challenges will not show sample answers.</p>
+    </div>
+    <div id="challenge" style="border:1px solid #dce4ed;border-radius:14px;padding:20px;min-height:210px;">
+      <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#61758a;font-weight:bold;">Ready?</div>
+      <h3 style="font-size:22px;line-height:1.35;margin:10px 0;">Generate your first question when you are ready.</h3>
+      <p style="margin:0;color:#61758a;">The question and vocabulary will be selected randomly.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+      <button id="generate" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:12px 20px;font-size:16px;font-weight:bold;cursor:pointer;">Generate question →</button>
+      <button id="revealMeanings" type="button" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:12px 18px;font-size:15px;font-weight:bold;cursor:pointer;">Show meanings</button>
+    </div>
+    <div id="meaningHelp" hidden style="margin-top:14px;padding:14px 16px;background:#f8fafc;border:1px solid #dce4ed;border-radius:10px;"></div>
+    <p id="roundInfo" aria-live="polite" style="font-size:13px;color:#61758a;margin-bottom:0;">50 discussion questions are available. Questions and expressions are shuffled; each item is used once per cycle before being reshuffled.</p>
+  </section>
+
+
+  <section id="escapeRoom" style="background:#fff;border:1px solid #dce4ed;border-radius:16px;padding:22px;margin-bottom:22px;">
+    <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#61758a;font-weight:bold;">Part 3 · Interactive cooperative game</div>
+    <h2 style="margin:6px 0 8px;color:#1a3d63;font-size:26px;">THE NEXORA FILES</h2>
+    <p>Four advanced missions. One corporate crisis with incomplete and potentially conflicting evidence. Distinguish fact from inference, test competing explanations, and defend a risk-aware recommendation to earn XP and unlock each file.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;margin:16px 0;">
+      <div style="background:#eef4fa;border-radius:10px;padding:13px;"><div style="font-size:11px;text-transform:uppercase;color:#526579;font-weight:bold;">Players</div><strong style="font-size:19px;color:#1a3d63;">2–7 students</strong></div>
+      <div style="background:#eef4fa;border-radius:10px;padding:13px;"><div style="font-size:11px;text-transform:uppercase;color:#526579;font-weight:bold;">Missions</div><strong style="font-size:19px;color:#1a3d63;">4 unlockable files</strong></div>
+      <div style="background:#eef4fa;border-radius:10px;padding:13px;"><div style="font-size:11px;text-transform:uppercase;color:#526579;font-weight:bold;">Team score</div><strong id="xpTotal" style="font-size:19px;color:#1a3d63;">0 XP</strong></div>
+    </div>
+    <div style="border-left:4px solid #1a3d63;background:#f7f9fc;padding:15px 17px;border-radius:8px;margin:18px 0;">
+      <h3 style="margin:0 0 7px;color:#1a3d63;">Your mission</h3>
+      <p style="margin-bottom:8px;">Nexora Technologies has discovered a discrepancy between its client-facing deck and internal estimate. A vendor requirement may explain part of the change, but approval, awareness, and client reliance remain uncertain. Your team must assess the evidence without jumping to conclusions and recommend a defensible course of action.</p>
+      <p style="margin:0;"><strong>Timeline:</strong> Friday — client presentation last edited. Monday — internal budget updated. Tuesday — vendor cost impact confirmed. The Friday event refers to the first week; Monday and Tuesday refer to the following week.</p>
+    </div>
+    <div id="xpGoalBanner" style="border:2px solid #1a3d63;border-radius:12px;padding:15px;margin:16px 0;background:#f7f9fc;">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+        <div><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#61758a;font-weight:bold;">Team objective</div><strong style="font-size:21px;color:#1a3d63;">Earn 400 XP to win</strong></div>
+        <div id="xpGoalStatus" style="font-weight:bold;color:#1a3d63;">400 XP remaining</div>
+      </div>
+      <div style="height:10px;background:#dce4ed;border-radius:999px;overflow:hidden;margin-top:12px;"><div id="xpProgressBar" style="height:100%;width:0%;background:#1a3d63;transition:width .25s;"></div></div>
+      <p style="margin:9px 0 0;font-size:13px;color:#526579;">Correct answer: earn the mission XP. Use a hint: lose 25 XP. Each incorrect attempt: lose 10 XP. Reach 400 XP by the end to complete the mission.</p>
+    </div>
+    <h3 style="color:#1a3d63;">Mission progress</h3>
+    <div id="missionNav" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,135px),1fr));gap:8px;margin:12px 0 16px;"></div>
+    <div id="missionPanel" style="border:1px solid #dce4ed;border-radius:14px;padding:18px;"></div>
+    <div style="margin-top:18px;background:#eef4fa;border-radius:12px;padding:16px;">
+      <h3 style="color:#1a3d63;margin:0 0 8px;">Team debrief</h3>
+      <p>Once all files are unlocked, give a 60-second recommendation to the CEO. Use at least one idiom and one phrasal verb from the vocabulary above.</p>
+      <button id="revealDebrief" type="button" disabled aria-disabled="true" title="Available after the team submits its Stage 4 answer" style="border:0;border-radius:999px;background:#9aa8b6;color:#fff;padding:11px 17px;font-weight:bold;cursor:not-allowed;opacity:.8;">🔒 Reveal facilitator notes — finish Stage 4 first</button>
+      <div id="facilitatorNotes" hidden style="margin-top:12px;padding:14px;background:#fff;border:1px solid #cbd5e1;border-radius:10px;">
+        <strong style="color:#1a3d63;">Facilitator notes</strong>
+        <p>The evidence establishes a $60,000 discrepancy and a sequence of events. The vendor added a security-testing requirement; its final cost impact was confirmed Tuesday. The evidence does not prove intentional concealment. A strong recommendation is to verify the final figures, correct the proposal, and communicate transparently with the client.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="text-align:center;padding:18px 12px;color:#526579;font-size:13px;">
+    <div style="font-weight:bold;color:#1a3d63;">Pharo English Academy</div>
+    <div>Advanced English · C2.2</div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  const idioms = [
+    ["Hold all the cards","To have the greatest power or advantage in a situation."],
+    ["Call someone’s bluff","To challenge someone to prove that they mean what they say."],
+    ["Open a can of worms","To create a complicated situation with many unexpected problems."],
+    ["Rock the boat","To do or say something that may disturb a stable situation."],
+    ["Have an axe to grind","To have a personal reason or hidden motive for supporting or opposing something."],
+    ["Skate on thin ice","To be in a risky situation where a mistake could have serious consequences."],
+    ["Be at odds with","To disagree or be in conflict with someone or something."],
+    ["Not see eye to eye","To disagree with another person."],
+    ["Throw someone under the bus","To blame or sacrifice someone else to protect yourself."],
+    ["Go out on a limb","To take a risk by supporting someone or something."],
+    ["Have a vested interest","To have a personal reason to want a particular outcome."],
+    ["More often than not","Usually; on most occasions."],
+    ["By and large","Generally; considering the situation as a whole."],
+    ["Have it coming","To deserve the unpleasant result that one receives."],
+    ["Get your comeuppance","To receive the punishment or bad result that you deserve."],
+    ["Against all odds","Despite very low chances of success."],
+    ["Come what may","Whatever happens; regardless of the consequences."],
+    ["A far cry from","Very different from something, usually in a disappointing way."],
+    ["Poles apart","Completely different from each other, especially in opinions or attitudes."]
+  ];
+  const phrasals = [
+    ["Winkle out","To obtain information or something that is difficult to get."],
+    ["Ferret out","To discover information that someone has hidden or that is difficult to find."],
+    ["Tease out","To gradually uncover or separate information, meaning, or details."],
+    ["Wade through","To deal with a large, difficult, or tedious amount of material."],
+    ["Zero in on","To focus attention precisely on a particular thing."],
+    ["Grapple with","To struggle to understand or deal with a difficult problem."],
+    ["Boil down to","To have one essential point or cause when simplified."],
+    ["Flesh out","To add details or develop an idea more fully."],
+    ["Iron out","To resolve small problems or differences."],
+    ["Bear out","To confirm that something is true."],
+    ["Square with","To be consistent with or agree with something."],
+    ["Bear on","To be relevant to or have an effect on something."],
+    ["Hinge on","To depend entirely or largely on something."],
+    ["Shore up","To support or strengthen something that is weak."],
+    ["Eke out","To make a small or limited amount of something last."]
+  ];
+  const questions = [
+    "Your team is divided over a major decision, and the deadline is approaching. How would you help the group move forward?",
+    "A project is falling behind, but nobody agrees on the main cause. What would you do first?",
+    "You discover that a popular proposal is based on incomplete information. How would you raise your concerns?",
+    "Two departments have conflicting priorities and limited resources. How would you approach the situation?",
+    "Your manager asks you to support a plan that you believe could create problems later. What would you do?",
+    "A colleague makes a serious mistake and tries to blame another team member. How would you respond?",
+    "Your company is considering a risky opportunity with a potentially significant payoff. How would you evaluate it?",
+    "You have to make an important decision, but the evidence is complicated and some details are missing. What steps would you take?",
+    "A team has spent months developing an idea that may no longer be practical. How would you handle the discussion?",
+    "You disagree with a senior colleague whose opinion carries a lot of weight. How would you communicate your position?",
+    "Your organisation is going through a difficult change, and staff morale is low. How could you help?",
+    "A client requests a quick solution, but you suspect the underlying problem is more complex. How would you proceed?",
+    "You notice that a process works well on paper but fails in practice. How would you investigate and improve it?",
+    "A colleague takes credit for work that several people contributed to. What would be a constructive way to address this?",
+    "Your team has limited time and budget to deliver an ambitious project. How would you decide what matters most?",
+    "A promising business opportunity comes with ethical concerns. How would you weigh the possible benefits against the risks?",
+    "You are asked to defend a decision that you did not make and do not fully agree with. What would you say or do?",
+    "A disagreement is beginning to damage collaboration between two teams. How would you try to resolve it?",
+    "A project succeeds despite serious obstacles. What factors do you think usually make that possible?",
+    "You suspect that a company policy is creating more problems than it solves. How would you challenge it professionally?",
+    "Your company has received contradictory feedback from two important clients. How would you determine what to prioritise?",
+    "A team member is highly talented but consistently ignores agreed procedures. How would you handle the situation?",
+    "Your organisation must choose between a quick solution and a more sustainable long-term investment. What would guide your decision?",
+    "A new policy could improve efficiency but may reduce employee trust. How would you assess the trade-off?",
+    "You have found evidence that challenges a decision made by senior leadership. How would you present it?",
+    "A project meeting keeps getting derailed by minor disagreements. What would you do to bring the discussion back on track?",
+    "Your team has collected a huge amount of data but is struggling to identify useful conclusions. How would you help?",
+    "A supplier promises excellent results, but their past performance has been inconsistent. How would you assess the risk?",
+    "Your department is under pressure to meet an unrealistic target. How would you respond to management?",
+    "Two colleagues have very different working styles, and their conflict is affecting the whole team. What would you recommend?",
+    "You are leading a project and discover that an early assumption was wrong. How would you communicate this and decide what to do next?",
+    "A competitor has launched a product similar to yours. How should your company decide its next move?",
+    "An employee raises a concern that could delay an important launch. How would you decide whether to act on it?",
+    "Your team has to present a recommendation, but the evidence supports more than one interpretation. How would you prepare?",
+    "A client insists on a feature that your team believes will not solve the real problem. How would you handle the conversation?",
+    "Your company is growing quickly, but its internal processes have not kept pace. Which problems would you address first?",
+    "You notice that a successful strategy in one market is failing in another. How would you explain the difference and respond?",
+    "A senior colleague dismisses an idea before the team has properly considered it. What could you do?",
+    "Your organisation needs to reduce costs without damaging quality or employee morale. How would you approach this challenge?",
+    "A project partner repeatedly misses commitments but offers convincing explanations each time. How would you address the pattern?",
+    "You are asked to make a recommendation with very little time to prepare. How would you decide what information is essential?",
+    "Your team is reluctant to report mistakes because people fear being blamed. How could you change that culture?",
+    "A business proposal looks attractive financially but could damage the company's reputation. How would you evaluate it?",
+    "Two departments agree on the goal but disagree about how to achieve it. How would you help them find common ground?",
+    "You discover that a widely accepted assumption in your industry may be inaccurate. What would you do before challenging it?",
+    "A colleague wants to make a public promise that your team may not be able to keep. How would you respond?",
+    "Your company must decide whether to continue, redesign, or cancel a project that has already consumed significant resources. What factors should matter most?",
+    "A new team member has identified a problem that experienced colleagues have overlooked. How would you encourage the team to respond?",
+    "You are negotiating with a partner whose priorities differ sharply from yours. How would you try to reach an agreement?",
+    "After a difficult quarter, leadership wants immediate results, but your team believes lasting improvement will take time. How would you make your case?"
+  ];
+
+  let activeType = "idiom";
+  let currentIdiom = null;
+  let currentPhrasal = null;
+  let currentQuestion = null;
+  let idiomDeck = [], phrasalDeck = [], questionDeck = [];
+  let previous = {idiom:null, phrasal:null, question:null};
+  let helpVisible = false;
+
+  function shuffle(items) {
+    const a = items.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+  function nextFrom(deckName, source, previousValue) {
+    let deck = deckName === "idiom" ? idiomDeck : deckName === "phrasal" ? phrasalDeck : questionDeck;
+    if (!deck.length) deck = shuffle(source);
+    let next = deck.pop();
+    if (source.length > 1 && next === previousValue && deck.length) {
+      const alternativeIndex = deck.findIndex(x => x !== previousValue);
+      if (alternativeIndex >= 0) {
+        const alternative = deck.splice(alternativeIndex, 1)[0];
+        deck.push(next);
+        next = alternative;
+      }
+    }
+    if (deckName === "idiom") idiomDeck = deck;
+    else if (deckName === "phrasal") phrasalDeck = deck;
+    else questionDeck = deck;
+    return next;
+  }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+  function renderVocabulary() {
+    const query = document.getElementById("searchVocab").value.trim().toLowerCase();
+    const list = document.getElementById("vocabList");
+    const entries = (activeType === "idiom" ? idioms : phrasals).filter(item =>
+      !query || item[0].toLowerCase().includes(query) || item[1].toLowerCase().includes(query)
+    );
+    if (!entries.length) {
+      list.innerHTML = '<p style="color:#61758a;">No matching expressions found.</p>';
+      return;
+    }
+    list.innerHTML = '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px;">' +
+      entries.map((item, i) => '<article style="border:1px solid #dce4ed;border-radius:10px;padding:13px 15px;background:#fff;">' +
+      '<div style="font-size:11px;color:#61758a;letter-spacing:1px;text-transform:uppercase;">' + (activeType === "idiom" ? "Idiom" : "Phrasal verb") + ' · ' + (i + 1) + '</div>' +
+      '<div style="font-weight:bold;color:#1a3d63;font-size:16px;margin:4px 0;">' + escapeHtml(item[0]) + '</div>' +
+      '<div>' + escapeHtml(item[1]) + '</div></article>').join("") + '</div>';
+  }
+  document.getElementById("showIdioms").addEventListener("click", () => {
+    activeType = "idiom";
+    document.getElementById("showIdioms").style.background = "#1a3d63";
+    document.getElementById("showIdioms").style.color = "#fff";
+    document.getElementById("showPhrasals").style.background = "#fff";
+    document.getElementById("showPhrasals").style.color = "#1a3d63";
+    renderVocabulary();
+  });
+  document.getElementById("showPhrasals").addEventListener("click", () => {
+    activeType = "phrasal";
+    document.getElementById("showPhrasals").style.background = "#1a3d63";
+    document.getElementById("showPhrasals").style.color = "#fff";
+    document.getElementById("showIdioms").style.background = "#fff";
+    document.getElementById("showIdioms").style.color = "#1a3d63";
+    renderVocabulary();
+  });
+  document.getElementById("searchVocab").addEventListener("input", renderVocabulary);
+
+  document.getElementById("generate").addEventListener("click", () => {
+    currentIdiom = nextFrom("idiom", idioms, previous.idiom);
+    currentPhrasal = nextFrom("phrasal", phrasals, previous.phrasal);
+    currentQuestion = nextFrom("question", questions, previous.question);
+    previous = {idiom:currentIdiom, phrasal:currentPhrasal, question:currentQuestion};
+    helpVisible = false;
+    const challenge = document.getElementById("challenge");
+    challenge.innerHTML =
+      '<div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#61758a;font-weight:bold;">Your speaking challenge</div>' +
+      '<h3 style="font-size:22px;line-height:1.4;margin:10px 0 20px;">' + escapeHtml(currentQuestion) + '</h3>' +
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;">' +
+      '<div style="background:#eef4fa;border-radius:10px;padding:14px;"><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#526579;font-weight:bold;">Required phrasal verb</div><div style="font-size:19px;font-weight:bold;color:#1a3d63;margin-top:5px;">' + escapeHtml(currentPhrasal[0]) + '</div></div>' +
+      '<div style="background:#f2f0fb;border-radius:10px;padding:14px;"><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#665b8d;font-weight:bold;">Required idiom</div><div style="font-size:19px;font-weight:bold;color:#44366b;margin-top:5px;">' + escapeHtml(currentIdiom[0]) + '</div></div>' +
+      '</div><p style="margin:16px 0 0;color:#526579;font-size:14px;">Use both expressions naturally in your answer. No model answer is provided.</p>';
+    document.getElementById("meaningHelp").hidden = true;
+    document.getElementById("revealMeanings").textContent = "Show meanings";
+    document.getElementById("roundInfo").textContent = "New random combination selected. Items are shuffled and will not repeat until their current cycle has been used.";
+  });
+  document.getElementById("revealMeanings").addEventListener("click", () => {
+    if (!currentIdiom || !currentPhrasal) {
+      document.getElementById("meaningHelp").innerHTML = "Generate a question first to see the meanings of its required expressions.";
+      document.getElementById("meaningHelp").hidden = false;
+      document.getElementById("revealMeanings").textContent = "Hide meanings";
+      return;
+    }
+    helpVisible = !helpVisible;
+    const help = document.getElementById("meaningHelp");
+    help.innerHTML = '<strong style="color:#1a3d63;">' + escapeHtml(currentPhrasal[0]) + ':</strong> ' + escapeHtml(currentPhrasal[1]) +
+      '<br><strong style="color:#44366b;">' + escapeHtml(currentIdiom[0]) + ':</strong> ' + escapeHtml(currentIdiom[1]);
+    help.hidden = !helpVisible;
+    document.getElementById("revealMeanings").textContent = helpVisible ? "Hide meanings" : "Show meanings";
+  });
+
+  const missions = [
+    {
+      title:"FILE 01 · Conflicting Evidence",
+      subtitle:"Separate what the records establish from what they merely suggest",
+      story:'<p><strong>Document A — Client proposal:</strong> $480,000. Last edited Friday at 16:42.</p><p><strong>Document B — Internal budget:</strong> $540,000. Version history shows an update Monday at 09:10.</p><p><strong>Document C — Project channel, Monday 09:18:</strong> “The revised estimate is in. Please hold external figures until the vendor confirms the scope.”</p><p><strong>Document D — Sales message, Monday 11:03:</strong> “I have sent the client the deck we reviewed last week.” The attachment ID matches the Friday version.</p><p>No delivery receipt, call transcript, or client response is available.</p>',
+      question:"Which conclusion is the most defensible on the evidence currently available?",
+      options:[
+        ["A","Sales knowingly misrepresented the final project cost after Finance had already revised the internal budget, despite knowing that the client-facing figure was no longer accurate."],
+        ["B","The internal budget is $60,000 higher than the client-facing proposal, although the records do not explain why the figures differ or which amount has final approval."],
+        ["C","The old deck appears to have been sent, but awareness and client reliance remain unproven."],
+        ["D","The vendor's security-testing requirement must account for the full $60,000 increase, even though its final cost impact was not confirmed until Tuesday."]
+      ], correct:"C",
+      feedback:"The internal estimate is $540,000, while the Friday client deck shows $480,000—a $60,000 discrepancy. Monday's message says the earlier deck was sent, and its attachment ID matches Friday's version. However, the records do not prove that the sender had read the hold message, that the client opened or relied on the deck, or that the vendor requirement explains the entire $60,000 difference.",
+      wrong:"Avoid turning a plausible inference into a proven fact. Consider what each record establishes—and what is still missing.",
+      hint:"Separate three questions: which figures differ, what was sent, and what the sender knew at the time.",
+      vocab:"Be ready to explain why a claim does or does not “square with” the evidence, and what additional information would “bear on” the conclusion.",
+      xp:100
+    },
+    {
+      title:"FILE 02 · The Timeline Trap",
+      subtitle:"Identify which conclusions the timeline actually supports",
+      story:'<p>The case file spans two consecutive weeks. Friday is in Week 1; Monday and Tuesday are in Week 2.</p><ul style="padding-left:22px;"><li><strong>Week 1 — Friday, 16:42:</strong> the client deck was last edited and showed $480,000.</li><li><strong>Week 2 — Monday, 09:10:</strong> Finance saved an internal estimate of $540,000.</li><li><strong>Week 2 — Monday, 09:18:</strong> the project channel posted: “Hold all external figures until the vendor confirms the revised scope.”</li><li><strong>Week 2 — Monday, 11:03:</strong> Sales wrote: “I\'ve sent the deck we reviewed last week.” The attachment ID matches Friday\'s version.</li><li><strong>Week 2 — Tuesday, 14:30:</strong> the vendor confirmed the financial impact of the additional security-testing requirement.</li></ul><p>The system logs show when records were created, but do not show when the salesperson read the channel message. There is no client read receipt, and the final commercial offer has not yet been approved.</p>',
+      question:"Which set contains only conclusions supported by the records?",
+      options:[
+        ["A","The deck was sent after the budget update; therefore Sales had read the hold message, and the vendor requirement explains the entire increase."],
+        ["B","The deck was reportedly sent after the budget update and hold message; the attachment matches Friday\'s version; the records do not establish when Sales read the instruction or whether the client opened the deck."],
+        ["C","The vendor confirmed the cost on Tuesday; therefore Finance could not have estimated any increase on Monday, and the $540,000 figure was invalid."],
+        ["D","The Friday deck predated the Monday budget update; therefore the $480,000 figure was accurate when created and remained commercially valid until Tuesday."]
+      ], correct:"B",
+      feedback:"Only B stays within the evidence. The logs establish the order of the budget update, hold message, and reported sending of the old deck. They do not establish that Sales read the instruction, that the client opened the attachment, or that the internal estimate was already an approved offer.",
+      wrong:"Check every clause in the option. One unsupported inference makes the whole set unreliable; distinguish timestamps, awareness, client access, and commercial approval.",
+      hint:"Look for the option that describes what the records show without inferring someone's knowledge, the client's actions, or the approval status of a figure.",
+      vocab:"Use “bear on” to explain which evidence is relevant to a claim, or “square with” to explain whether an interpretation is consistent with the timeline.",
+      xp:100
+    },
+    {
+      title:"FILE 03 · Competing Hypotheses",
+      subtitle:"Weigh explanations without overclaiming",
+      story:'<p>The team is considering three hypotheses:</p><ol style="padding-left:22px;"><li><strong>H1 — Process failure:</strong> the deck was sent from an outdated version before the new estimate was incorporated.</li><li><strong>H2 — Deliberate concealment:</strong> someone knowingly kept the lower figure in the client-facing deck.</li><li><strong>H3 — Scope uncertainty:</strong> the internal estimate changed provisionally while the vendor requirement was still being clarified.</li></ol><p>Additional evidence: the Monday channel message says to hold external figures pending vendor confirmation. The vendor confirmed the final cost impact on Tuesday. There is no read receipt for the channel message, no record of who approved the client deck, and no evidence that the client accepted or relied on the $480,000 figure.</p>',
+      question:"Which assessment is the most rigorous given the current evidence?",
+      options:[
+        ["A","H2 is proven because the old deck was sent after the budget changed, which is enough to establish that someone deliberately chose to conceal the revised figure."],
+        ["B","H1 and H3 fit parts of the record; H2 is unproven, so check approval and message-access records."],
+        ["C","H3 is proven, ruling out any process failure, because the team was waiting for the vendor to confirm the additional security-testing requirement."],
+        ["D","All hypotheses are equally supported, so further checks would add nothing; the team should treat the available explanations as interchangeable."]
+      ], correct:"B",
+      feedback:"H1 is consistent with the use of an outdated deck, while H3 is consistent with the instruction to wait for vendor confirmation. Neither explanation is fully proven, and the current records do not establish deliberate concealment. Approval history and message-access records would help distinguish the hypotheses.",
+      wrong:"A sound assessment does not treat “possible” as “proven,” nor does it assume all explanations have equal evidential support.",
+      hint:"Ask which hypotheses fit the evidence, which one requires an unsupported claim about intent, and what evidence would discriminate between them.",
+      vocab:"“Bear out” means confirm; “tease out” means gradually uncover distinctions. Explain what evidence could bear out one hypothesis over another.",
+      xp:150
+    },
+    {
+      title:"FILE 04 · The Executive Dilemma",
+      subtitle:"Choose a defensible action under uncertainty",
+      story:'<p>The CEO needs a recommendation before the next client meeting. Finance confirms that the current internal estimate is $540,000. The client deck in the shared folder still shows $480,000. The vendor has now confirmed the additional security-testing cost, but the project lead has not yet confirmed whether every line item in the internal estimate is approved for the final commercial offer.</p><p>The client values transparency and has asked for a revised delivery plan. Delaying all communication may damage trust; sending an unapproved figure may create a new commitment. The CEO authorizes one immediate action and a follow-up plan.</p>',
+      question:"Which recommendation best balances commercial risk, transparency, and the limits of the evidence?",
+      options:[
+        ["A","Issue $540,000 as final now, since Finance has the latest estimate and using the newest figure should demonstrate decisiveness to the client."],
+        ["B","Keep the $480,000 figure until the client notices, while checking internally; this avoids making a new commitment before the numbers have been fully reconciled."],
+        ["C","Flag the discrepancy, verify the scope and price with Finance and the project owner, then send an approved revision."],
+        ["D","Blame Sales for the discrepancy and promise the price will not change again, reassuring the client before the internal investigation creates further delay."]
+      ], correct:"C",
+      feedback:"This option acknowledges the discrepancy promptly without presenting $540,000 as an approved offer before sign-off. It assigns a clear next step—reconcile the scope and figures with Finance and the project owner—then communicate the validated proposal and its delivery implications. It also avoids blaming an individual before intent is established.",
+      wrong:"Consider both sides of the risk: silence can undermine trust, but issuing an unapproved figure can create a fresh commercial problem. Avoid blame unsupported by the evidence.",
+      hint:"A defensible response should acknowledge the discrepancy, avoid a premature commitment, identify who must validate the figure, and set out the next communication step.",
+      vocab:"In the final briefing, use at least one idiom and one phrasal verb accurately. Explain why your recommendation is not simply a way to “rock the boat” or “throw someone under the bus.”",
+      xp:150
+    }
+  ];
+  let activeMission = 0;
+  let unlockedMission = 0;
+  let score = 0;
+  const XP_GOAL = 400;
+  const wrongAttempts = [0,0,0,0];
+  let gameEnded = false;
+  const completed = [false,false,false,false];
+  const hintsUsed = [false,false,false,false];
+  const selected = ["","","",""];
+
+  function updateXPUI(){
+    document.getElementById("xpTotal").textContent=score+" XP";
+    const remaining=Math.max(0,XP_GOAL-score);
+    document.getElementById("xpGoalStatus").textContent=score>=XP_GOAL?"Goal reached!":remaining+" XP remaining";
+    document.getElementById("xpProgressBar").style.width=Math.min(100,Math.max(0,score/XP_GOAL*100))+"%";
+    document.getElementById("xpProgressBar").style.background=score>=XP_GOAL?"#16803c":"#1a3d63";
+  }
+  function renderMissionNav(){
+    const nav=document.getElementById("missionNav");
+    nav.innerHTML=missions.map((m,i)=>{
+      const unlocked=i<=unlockedMission;
+      const done=completed[i];
+      return '<button type="button" data-mission="'+i+'" '+(!unlocked?'disabled':'')+' style="text-align:left;border:1px solid '+(i===activeMission?'#1a3d63':'#dce4ed')+';border-radius:10px;padding:11px;background:'+(i===activeMission?'#1a3d63':done?'#e8f4ec':'#f7f9fc')+';color:'+(i===activeMission?'#fff':done?'#285c43':unlocked?'#1a3d63':'#8a98a8')+';font-weight:bold;cursor:'+(unlocked?'pointer':'not-allowed')+';opacity:'+(unlocked?'1':'.6')+';">'+(done?'✓ ':'')+'Mission '+(i+1)+'<div style="font-size:12px;font-weight:normal;margin-top:4px;">'+(unlocked?m.subtitle:'🔒 Locked')+'</div></button>';
+    }).join("");
+    nav.querySelectorAll("button[data-mission]").forEach(b=>b.addEventListener("click",()=>{activeMission=Number(b.dataset.mission);renderGame();}));
+  }
+  function renderGame(){
+    renderMissionNav();
+    const m=missions[activeMission], panel=document.getElementById("missionPanel");
+    panel.innerHTML='<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#61758a;font-weight:bold;">Mission '+(activeMission+1)+' of 4</span><span style="font-size:13px;color:#61758a;font-weight:bold;">Reward: '+m.xp+' XP</span></div><h3 style="font-size:22px;color:#1a3d63;margin:7px 0 4px;">'+m.title+'</h3><p style="color:#526579;margin-top:0;">'+m.subtitle+'</p>'+m.story+'<div style="margin-top:16px;padding:14px;background:#f7f9fc;border-radius:10px;"><strong style="color:#1a3d63;">CHALLENGE</strong><p style="font-weight:bold;margin:8px 0 12px;">'+m.question+'</p>'+m.options.map(o=>'<label style="display:flex;align-items:flex-start;gap:9px;padding:10px;border:1px solid #dce4ed;border-radius:8px;background:#fff;margin:7px 0;cursor:pointer;"><input type="radio" name="missionChoice" value="'+o[0]+'" '+(selected[activeMission]===o[0]?'checked':'')+' '+(completed[activeMission]?'disabled':'')+' style="margin-top:4px;"><span><strong>'+o[0]+'.</strong> '+o[1]+'</span></label>').join("")+'</div><div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:13px;"><button id="checkMission" type="button" '+(completed[activeMission]?'disabled':'')+' style="border:0;border-radius:999px;background:'+(completed[activeMission]?'#7a8b9a':'#1a3d63')+';color:#fff;padding:11px 17px;font-weight:bold;cursor:pointer;">'+(completed[activeMission]?'Mission completed ✓':'Submit answer')+'</button><button id="hintMission" type="button" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:10px 15px;font-weight:bold;cursor:pointer;">'+(hintsUsed[activeMission]?'Hint revealed':'Use a hint')+' (-25 XP)</button></div><div id="missionFeedback" aria-live="polite" style="margin-top:12px;" '+(completed[activeMission]?'':'hidden')+'></div><div id="missionHint" '+(hintsUsed[activeMission]?'':'hidden')+' style="margin-top:10px;padding:12px;background:#fff8e7;border:1px solid #f0d9a5;border-radius:9px;">'+(hintsUsed[activeMission]?m.hint:'')+'</div>';
+    panel.querySelectorAll('input[name="missionChoice"]').forEach(r=>r.addEventListener('change',()=>selected[activeMission]=r.value));
+    if(completed[activeMission]){
+      const f=document.getElementById("missionFeedback");f.hidden=false;f.innerHTML='<div style="border:1px solid #16a34a;background:#f0fdf4;border-radius:9px;padding:12px;"><strong style="color:#166534;">Mission cleared · +'+Math.max(0,m.xp-(hintsUsed[activeMission]?25:0))+' XP</strong><p style="margin-bottom:0;">'+m.feedback+'</p></div>';
+    }
+    document.getElementById("checkMission").onclick=()=>{
+      const choice=selected[activeMission];
+      const f=document.getElementById("missionFeedback");f.hidden=false;
+      if(!choice){f.innerHTML='<div style="padding:12px;border:1px solid #d97706;border-radius:9px;background:#fffbeb;">Choose an answer before submitting.</div>';return;}
+      if(choice===m.correct){
+        if(!completed[activeMission]){completed[activeMission]=true;score+=m.xp;}
+        if(activeMission===3){
+          revealDebriefButton.disabled=false;
+          revealDebriefButton.removeAttribute("aria-disabled");
+          revealDebriefButton.title="Stage 4 submitted — facilitator notes unlocked";
+          revealDebriefButton.textContent="Reveal facilitator notes";
+          revealDebriefButton.style.background="#1a3d63";
+          revealDebriefButton.style.cursor="pointer";
+          revealDebriefButton.style.opacity="1";
+        }
+        unlockedMission=Math.max(unlockedMission,Math.min(3,activeMission+1));
+        updateXPUI();
+        const endMessage = score>=XP_GOAL
+          ? '<p style="font-weight:bold;color:#166534;">MISSION SUCCESS! You reached the '+XP_GOAL+' XP target. Prepare your team debrief.</p>'
+          : '<p style="font-weight:bold;color:#991b1b;">MISSION FAILED. Your team finished with '+score+' XP, below the '+XP_GOAL+' XP target.</p><button id="restartGame" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:10px 15px;font-weight:bold;cursor:pointer;">Restart challenge</button>';
+        f.innerHTML='<div style="border:1px solid #16a34a;background:#f0fdf4;border-radius:9px;padding:12px;"><strong style="color:#166534;">Correct! Mission cleared.</strong><p>'+m.feedback+'</p><p style="margin-bottom:0;"><strong>Vocabulary connection:</strong> '+m.vocab+'</p>'+(activeMission<3?'<button id="nextMission" type="button" style="margin-top:12px;border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:10px 15px;font-weight:bold;cursor:pointer;">Unlock next file →</button>':endMessage)+'</div>';
+        document.getElementById("checkMission").disabled=true;document.getElementById("checkMission").textContent="Mission completed ✓";document.getElementById("checkMission").style.background="#7a8b9a";
+        renderMissionNav();
+        const next=document.getElementById("nextMission");if(next)next.onclick=()=>{activeMission++;renderGame();};
+        const restart=document.getElementById("restartGame");if(restart)restart.onclick=()=>location.reload();
+      }else{
+        wrongAttempts[activeMission]++;
+        score-=10;
+        updateXPUI();
+        updateXPUI();
+        if(score + missions.slice(activeMission+1).reduce((sum,item)=>sum+item.xp,0) < XP_GOAL && activeMission===3){
+          gameEnded=true;
+          f.innerHTML='<div style="border:1px solid #dc2626;background:#fef2f2;border-radius:9px;padding:12px;"><strong style="color:#991b1b;">MISSION FAILED — XP target unreachable</strong><p>Your team has '+score+' XP. The target is '+XP_GOAL+' XP. Restart the challenge and try to conserve points.</p><button id="restartGame" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:10px 15px;font-weight:bold;cursor:pointer;">Restart challenge</button></div>';
+          document.getElementById("restartGame").onclick=()=>location.reload();
+          return;
+        }
+        f.innerHTML='<div style="border:1px solid #dc2626;background:#fef2f2;border-radius:9px;padding:12px;"><strong style="color:#991b1b;">Incorrect answer · −10 XP</strong><p>'+m.wrong+'</p><p style="margin-bottom:0;">Incorrect attempts on this file: '+wrongAttempts[activeMission]+'. Current score: '+score+' XP.</p></div>';
+      }
+    };
+    document.getElementById("hintMission").onclick=()=>{
+      if(!hintsUsed[activeMission]&&!completed[activeMission]){
+        hintsUsed[activeMission]=true;
+        score-=25;
+        updateXPUI();
+      }
+      const h=document.getElementById("missionHint");h.hidden=!h.hidden;h.textContent=h.hidden?"":m.hint;
+      document.getElementById("hintMission").textContent=h.hidden?(hintsUsed[activeMission]?"Hint used (−25 XP)":"Use a hint (−25 XP)"):"Hide hint";
+    };
+  }
+  const revealDebriefButton = document.getElementById("revealDebrief");
+  revealDebriefButton.onclick=()=>{
+    if(!completed[3]) return;
+    const d=document.getElementById("facilitatorNotes");
+    d.hidden=!d.hidden;
+    revealDebriefButton.textContent=d.hidden?"Reveal facilitator notes":"Hide facilitator notes";
+  };
+  updateXPUI();
+  renderGame();
+
+    renderVocabulary();
+})();
+</script>
+</body>
+</html>
