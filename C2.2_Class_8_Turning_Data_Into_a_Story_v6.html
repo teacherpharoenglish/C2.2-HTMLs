@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C2.2 — Class 8 | Turning Data into a Story</title>
+
+<style>
+/* Explicit contrast for native dropdowns, including Moodle theme overrides. */
+#precisionDropdowns select, select[id^="precision"] {
+  color: #18324b !important;
+  background-color: #ffffff !important;
+  border: 1px solid #8ca3b8 !important;
+  -webkit-text-fill-color: #18324b !important;
+  opacity: 1 !important;
+  min-height: 44px;
+  line-height: 1.35;
+}
+#precisionDropdowns select option, select[id^="precision"] option {
+  color: #18324b !important;
+  background-color: #ffffff !important;
+}
+#precisionDropdowns {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+#precisionDropdowns > div {
+  display: flex; flex-direction: column; min-width: 0; height: 100%; box-sizing: border-box;
+}
+#precisionDropdowns > div label { flex: 1; }
+@media (max-width: 640px) { #precisionDropdowns { grid-template-columns: minmax(0, 1fr) !important; } }
+</style>
+</head>
+<body style="margin:0;background:#f3f6fa;font-family:Arial,Helvetica,sans-serif;color:#243447;line-height:1.55;">
+<div style="max-width:1100px;margin:0 auto;padding:24px 16px 40px;box-sizing:border-box;">
+  <header style="background:linear-gradient(135deg,#1a3d63,#285780);color:#fff;border-radius:20px;padding:clamp(22px,4vw,34px);margin-bottom:22px;box-shadow:0 8px 22px rgba(26,61,99,.14);">
+    <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.88;">Pharo English Academy · C2.2</div>
+    <h1 style="font-size:clamp(28px,4.5vw,42px);line-height:1.12;margin:12px 0 10px;overflow-wrap:anywhere;">Class 8 — Turning Data into a Story</h1>
+    <p style="margin:0;max-width:780px;color:#eaf1f8;font-size:clamp(15px,2vw,18px);">Advanced professional English · Data description, interpretation &amp; storytelling</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;">
+      <span style="background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 11px;font-size:12px;">Observe</span>
+      <span style="background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 11px;font-size:12px;">Interpret</span>
+      <span style="background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 11px;font-size:12px;">Narrate</span>
+    </div>
+  </header>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">The mission</div>
+    <h2 style="margin:5px 0 9px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">From numbers to a defensible narrative</h2>
+    <p style="margin-top:0;">A strong data story does more than describe what changed. It identifies the pattern that matters, distinguishes evidence from interpretation, and explains why the audience should care—without claiming more than the data support.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px;margin-top:16px;">
+      <div style="background:#eef4fa;border-radius:12px;padding:14px;"><div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#526579;font-weight:bold;">1 · Observe</div><strong style="display:block;color:#1a3d63;margin-top:4px;">What can we see?</strong><span style="font-size:14px;">Describe trends, comparisons and anomalies.</span></div>
+      <div style="background:#eef4fa;border-radius:12px;padding:14px;"><div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#526579;font-weight:bold;">2 · Interpret</div><strong style="display:block;color:#1a3d63;margin-top:4px;">What might it mean?</strong><span style="font-size:14px;">Test explanations and qualify conclusions.</span></div>
+      <div style="background:#eef4fa;border-radius:12px;padding:14px;"><div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#526579;font-weight:bold;">3 · Narrate</div><strong style="display:block;color:#1a3d63;margin-top:4px;">Why does it matter?</strong><span style="font-size:14px;">Connect the findings into a coherent story.</span></div>
+    </div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Part 1 · Language toolkit</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">12 expressions for precise data storytelling</h2>
+    <p style="margin-top:0;">Learn the meaning and the job each expression does. The goal is not to use the fanciest word; it is to choose the most accurate one.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));align-items:stretch;gap:14px;margin-top:16px;">
+      <article style="box-sizing:border-box;display:flex;flex-direction:column;border:1px solid #dce4ed;border-top:4px solid #2d6d95;border-radius:12px;padding:15px;background:#fbfdff;min-width:0;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#61758a;font-weight:bold;">01 · Movement</div>
+        <h3 style="margin:5px 0 12px;color:#1a3d63;min-height:28px;">Describe the trend</h3>
+        <div style="display:grid;grid-template-rows:repeat(4,minmax(66px,auto));gap:7px;flex:1;">
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">surge</strong><span style="display:block;color:#526579;font-size:13px;">rise suddenly and substantially</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">dip</strong><span style="display:block;color:#526579;font-size:13px;">fall slightly, often temporarily</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">plummet</strong><span style="display:block;color:#526579;font-size:13px;">fall dramatically</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">level off</strong><span style="display:block;color:#526579;font-size:13px;">stop rising or falling and stabilise</span></div>
+        </div>
+      </article>
+      <article style="box-sizing:border-box;display:flex;flex-direction:column;border:1px solid #dce4ed;border-top:4px solid #2d6d95;border-radius:12px;padding:15px;background:#fbfdff;min-width:0;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#61758a;font-weight:bold;">02 · Comparison</div>
+        <h3 style="margin:5px 0 12px;color:#1a3d63;min-height:28px;">Connect the metrics</h3>
+        <div style="display:grid;grid-template-rows:repeat(4,minmax(66px,auto));gap:7px;flex:1;">
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">outpace</strong><span style="display:block;color:#526579;font-size:13px;">grow or progress faster than something else</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">lag behind</strong><span style="display:block;color:#526579;font-size:13px;">progress more slowly or perform worse</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">fluctuate</strong><span style="display:block;color:#526579;font-size:13px;">rise and fall irregularly</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">account for</strong><span style="display:block;color:#526579;font-size:13px;">represent a particular share or proportion</span></div>
+        </div>
+      </article>
+      <article style="box-sizing:border-box;display:flex;flex-direction:column;border:1px solid #dce4ed;border-top:4px solid #2d6d95;border-radius:12px;padding:15px;background:#fbfdff;min-width:0;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#61758a;font-weight:bold;">03 · Interpretation</div>
+        <h3 style="margin:5px 0 12px;color:#1a3d63;min-height:28px;">Explain with care</h3>
+        <div style="display:grid;grid-template-rows:repeat(4,minmax(66px,auto));gap:7px;flex:1;">
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">stand out</strong><span style="display:block;color:#526579;font-size:13px;">be particularly noticeable</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">coincide with</strong><span style="display:block;color:#526579;font-size:13px;">occur at the same time as something else</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">point to</strong><span style="display:block;color:#526579;font-size:13px;">suggest a possible explanation or conclusion</span></div>
+          <div style="box-sizing:border-box;background:#fff;border:1px solid #e3eaf1;border-radius:8px;padding:9px 10px;min-width:0;"><strong style="display:block;color:#1a3d63;overflow-wrap:anywhere;">cannot be attributed solely to</strong><span style="display:block;color:#526579;font-size:13px;">cannot be explained by just one factor</span></div>
+        </div>
+      </article>
+    </div>
+    <div style="margin-top:14px;background:#f2f0fb;border-left:4px solid #7766a8;border-radius:9px;padding:13px 15px;"><strong style="color:#44366b;">Precision note</strong><p style="margin:5px 0 0;">“Surge” and “plummet” imply marked movement; “dip” suggests a smaller decline. “Coincide with” indicates timing, not proof of cause. “Point to” introduces an interpretation, not a certainty.</p></div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Part 2 · The language rule</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">🚫 The Banned Words Challenge</h2>
+    <p style="margin-top:0;">During the practice activities, do not use these basic words or phrases to describe the data. They are not inherently wrong; the restriction forces you to be more precise.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0;">
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">go up</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">go down</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">get better</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">get worse</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">a lot</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">a little</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">big</span>
+      <span style="background:#fff1f0;border:1px solid #f0c8c4;color:#9c3029;border-radius:999px;padding:7px 12px;font-weight:bold;">small</span>
+    </div>
+    <div style="border:1px solid #dce4ed;border-radius:12px;padding:15px;background:#fbfdff;">
+      <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#61758a;font-weight:bold;">Worked example</div>
+      <p style="margin:7px 0;"><span style="color:#9c3029;text-decoration:line-through;">“Sales went up a lot.”</span></p>
+      <p style="margin:7px 0;"><strong style="color:#1a3d63;">“Sales surged in the final quarter.”</strong></p>
+      <p style="margin:0;color:#526579;font-size:14px;">The revised sentence communicates both direction and magnitude more precisely.</p>
+    </div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Activity 1 · Controlled practice</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">Choose the expression that does the job</h2>
+    <p style="margin-top:0;">Select the most precise expression for each sentence. The options are deliberately mixed; choose based on meaning, not on the order in which the vocabulary was introduced.</p>
+    <div id="vocabQuiz" style="display:grid;gap:12px;margin-top:16px;"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+      <button id="checkVocabQuiz" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:11px 18px;font-weight:bold;cursor:pointer;">Check answers</button>
+      <button id="resetVocabQuiz" type="button" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:10px 17px;font-weight:bold;cursor:pointer;">Try again</button>
+    </div>
+    <div id="vocabQuizFeedback" aria-live="polite" style="margin-top:12px;"></div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Activity 2 · Precision practice</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">Banned Words: choose the precise upgrade</h2>
+    <p style="margin-top:0;">Complete sentences A–F by selecting the most precise expression from each dropdown. Choose according to the meaning and the pattern described, not simply because an expression sounds advanced.</p>
+    <div id="precisionDropdowns" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:16px;">
+      <div data-pq="0" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;min-width:0;"><label for="precisionA" style="display:block;font-weight:bold;color:#1a3d63;margin-bottom:8px;">A. Revenue ______ in Q4, rising sharply after two relatively stable quarters.</label><select id="precisionA" style="width:100%;max-width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;background:#fff;color:#18324b;-webkit-text-fill-color:#18324b;opacity:1;"><option value="" style="color:#18324b;background:#fff;">Choose an expression…</option><option value="fluctuated" style="color:#18324b;background:#fff;">fluctuated</option><option value="lagged behind" style="color:#18324b;background:#fff;">lagged behind</option><option value="surged" style="color:#18324b;background:#fff;">surged</option><option value="accounted for" style="color:#18324b;background:#fff;">accounted for</option></select><div class="precisionFeedback" aria-live="polite" style="font-size:13px;margin-top:8px;"></div></div>
+      <div data-pq="1" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;min-width:0;"><label for="precisionB" style="display:block;font-weight:bold;color:#1a3d63;margin-bottom:8px;">B. Customer retention ______ slightly in Q2 before recovering in Q3.</label><select id="precisionB" style="width:100%;max-width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;background:#fff;color:#18324b;-webkit-text-fill-color:#18324b;opacity:1;"><option value="" style="color:#18324b;background:#fff;">Choose an expression…</option><option value="dipped" style="color:#18324b;background:#fff;">dipped</option><option value="plummeted" style="color:#18324b;background:#fff;">plummeted</option><option value="stood out" style="color:#18324b;background:#fff;">stood out</option><option value="outpaced" style="color:#18324b;background:#fff;">outpaced</option></select><div class="precisionFeedback" aria-live="polite" style="font-size:13px;margin-top:8px;"></div></div>
+      <div data-pq="2" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;min-width:0;"><label for="precisionC" style="display:block;font-weight:bold;color:#1a3d63;margin-bottom:8px;">C. New customer acquisition ______ customer retention in Q4, growing more rapidly than the returning-customer base.</label><select id="precisionC" style="width:100%;max-width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;background:#fff;color:#18324b;-webkit-text-fill-color:#18324b;opacity:1;"><option value="" style="color:#18324b;background:#fff;">Choose an expression…</option><option value="coincided with" style="color:#18324b;background:#fff;">coincided with</option><option value="levelled off" style="color:#18324b;background:#fff;">levelled off</option><option value="pointed to" style="color:#18324b;background:#fff;">pointed to</option><option value="outpaced" style="color:#18324b;background:#fff;">outpaced</option></select><div class="precisionFeedback" aria-live="polite" style="font-size:13px;margin-top:8px;"></div></div>
+      <div data-pq="3" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;min-width:0;"><label for="precisionD" style="display:block;font-weight:bold;color:#1a3d63;margin-bottom:8px;">D. The monthly results ______ between 62 and 75, with no consistent upward or downward direction.</label><select id="precisionD" style="width:100%;max-width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;background:#fff;color:#18324b;-webkit-text-fill-color:#18324b;opacity:1;"><option value="" style="color:#18324b;background:#fff;">Choose an expression…</option><option value="surged" style="color:#18324b;background:#fff;">surged</option><option value="fluctuated" style="color:#18324b;background:#fff;">fluctuated</option><option value="accounted for" style="color:#18324b;background:#fff;">accounted for</option><option value="lagged behind" style="color:#18324b;background:#fff;">lagged behind</option></select><div class="precisionFeedback" aria-live="polite" style="font-size:13px;margin-top:8px;"></div></div>
+      <div data-pq="4" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;min-width:0;"><label for="precisionE" style="display:block;font-weight:bold;color:#1a3d63;margin-bottom:8px;">E. The policy change ______ the sudden shift in customer satisfaction, although timing alone does not prove causation.</label><select id="precisionE" style="width:100%;max-width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;background:#fff;color:#18324b;-webkit-text-fill-color:#18324b;opacity:1;"><option value="" style="color:#18324b;background:#fff;">Choose an expression…</option><option value="coincided with" style="color:#18324b;background:#fff;">coincided with</option><option value="outpaced" style="color:#18324b;background:#fff;">outpaced</option><option value="levelled off" style="color:#18324b;background:#fff;">levelled off</option><option value="accounted for" style="color:#18324b;background:#fff;">accounted for</option></select><div class="precisionFeedback" aria-live="polite" style="font-size:13px;margin-top:8px;"></div></div>
+      <div data-pq="5" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;min-width:0;"><label for="precisionF" style="display:block;font-weight:bold;color:#1a3d63;margin-bottom:8px;">F. Subscription sales ______ 63% of total revenue in Q4.</label><select id="precisionF" style="width:100%;max-width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;background:#fff;color:#18324b;-webkit-text-fill-color:#18324b;opacity:1;"><option value="" style="color:#18324b;background:#fff;">Choose an expression…</option><option value="stood out" style="color:#18324b;background:#fff;">stood out</option><option value="dipped" style="color:#18324b;background:#fff;">dipped</option><option value="accounted for" style="color:#18324b;background:#fff;">accounted for</option><option value="surged" style="color:#18324b;background:#fff;">surged</option></select><div class="precisionFeedback" aria-live="polite" style="font-size:13px;margin-top:8px;"></div></div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+      <button id="checkPrecisionDropdowns" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:11px 18px;font-weight:bold;cursor:pointer;">Check answers</button>
+      <button id="resetPrecisionDropdowns" type="button" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:10px 17px;font-weight:bold;cursor:pointer;">Try again</button>
+    </div>
+    <div id="precisionDropdownSummary" aria-live="polite" style="margin-top:12px;"></div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Activity 3 · Dashboard detective</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">What stands out?</h2>
+    <p style="margin-top:0;">Read the fictional quarterly dashboard. First describe the visible patterns. Then decide which interpretation is supported—and which would require more evidence.</p>
+    <div style="border:1px solid #dce4ed;border-radius:14px;padding:15px;background:#fbfdff;margin-top:15px;">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;"><div><div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#61758a;font-weight:bold;">NORTHSTAR · QUARTERLY SNAPSHOT</div><h3 style="margin:4px 0;color:#1a3d63;">Commercial performance</h3></div><span style="font-size:12px;color:#526579;background:#eef4fa;border-radius:999px;padding:6px 10px;">Fictional data</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px;margin:12px 0;">
+        <div style="background:#eef4fa;border-radius:10px;padding:12px;"><div style="font-size:12px;color:#526579;">Revenue ($m)</div><div style="font-size:24px;font-weight:bold;color:#1a3d63;">2.1 → 2.8</div><div style="font-size:12px;color:#256a46;">Q1 to Q4</div></div>
+        <div style="background:#eef4fa;border-radius:10px;padding:12px;"><div style="font-size:12px;color:#526579;">Customer retention</div><div style="font-size:24px;font-weight:bold;color:#1a3d63;">88% → 79%</div><div style="font-size:12px;color:#9c3029;">Q1 to Q4</div></div>
+        <div style="background:#eef4fa;border-radius:10px;padding:12px;"><div style="font-size:12px;color:#526579;">New customers</div><div style="font-size:24px;font-weight:bold;color:#1a3d63;">400 → 690</div><div style="font-size:12px;color:#256a46;">Q1 to Q4</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin-top:14px;">
+        <div style="border:1px solid #dce4ed;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">Revenue by quarter ($m)</strong><div style="display:flex;align-items:flex-end;gap:12px;height:142px;padding:12px 5px 0;border-bottom:1px solid #cbd5e1;margin-top:8px;">
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">2.1</div><div style="height:60%;background:#6c9dc0;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q1</span></div>
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">2.2</div><div style="height:63%;background:#6c9dc0;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q2</span></div>
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">2.2</div><div style="height:63%;background:#6c9dc0;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q3</span></div>
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">2.8</div><div style="height:80%;background:#1a3d63;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q4</span></div>
+        </div><p style="font-size:13px;color:#526579;margin-bottom:0;">Revenue levels off in Q2–Q3, then surges in Q4.</p></div>
+        <div style="border:1px solid #dce4ed;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">Retention by quarter</strong><div style="display:flex;align-items:flex-end;gap:12px;height:142px;padding:12px 5px 0;border-bottom:1px solid #cbd5e1;margin-top:8px;">
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">88%</div><div style="height:88%;background:#6c9dc0;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q1</span></div>
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">86%</div><div style="height:86%;background:#6c9dc0;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q2</span></div>
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">82%</div><div style="height:82%;background:#6c9dc0;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q3</span></div>
+          <div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;"><div style="font-size:11px;">79%</div><div style="height:79%;background:#1a3d63;border-radius:5px 5px 0 0;"></div><span style="font-size:12px;">Q4</span></div>
+        </div><p style="font-size:13px;color:#526579;margin-bottom:0;">Retention declines throughout the year.</p></div>
+      </div>
+      <p style="font-size:13px;color:#526579;margin-bottom:0;">Note: the dashboard shows timing and movement only. It does not identify why retention fell or why revenue rose.</p>
+    </div>
+    <h3 style="color:#1a3d63;margin:18px 0 8px;">Which conclusion is most defensible?</h3>
+    <div id="dashboardChoices" style="display:grid;gap:9px;">
+      <label style="display:flex;gap:9px;align-items:flex-start;border:1px solid #dce4ed;border-radius:10px;padding:12px;cursor:pointer;background:#fff;"><input type="radio" name="dashboardChoice" value="A" style="margin-top:4px;"><span><strong>A.</strong> The acquisition campaign caused revenue to surge, despite weaker retention.</span></label>
+      <label style="display:flex;gap:9px;align-items:flex-start;border:1px solid #dce4ed;border-radius:10px;padding:12px;cursor:pointer;background:#fff;"><input type="radio" name="dashboardChoice" value="B" style="margin-top:4px;"><span><strong>B.</strong> Revenue surged in Q4 while retention continued to decline; the dashboard does not establish a causal link between the two patterns.</span></label>
+      <label style="display:flex;gap:9px;align-items:flex-start;border:1px solid #dce4ed;border-radius:10px;padding:12px;cursor:pointer;background:#fff;"><input type="radio" name="dashboardChoice" value="C" style="margin-top:4px;"><span><strong>C.</strong> Falling retention proves that the new customers were less valuable than existing customers.</span></label>
+      <label style="display:flex;gap:9px;align-items:flex-start;border:1px solid #dce4ed;border-radius:10px;padding:12px;cursor:pointer;background:#fff;"><input type="radio" name="dashboardChoice" value="D" style="margin-top:4px;"><span><strong>D.</strong> Revenue and retention are inversely correlated, so the company should stop acquiring new customers.</span></label>
+    </div>
+    <button id="checkDashboard" type="button" style="margin-top:13px;border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:11px 18px;font-weight:bold;cursor:pointer;">Check interpretation</button>
+    <div id="dashboardFeedback" aria-live="polite" style="margin-top:12px;"></div>
+    <div style="margin-top:16px;background:#eef4fa;border-radius:10px;padding:14px;"><strong style="color:#1a3d63;">Discuss</strong><ol style="margin-bottom:0;padding-left:22px;"><li>Which metric stands out most, and why?</li><li>What additional information would help explain the retention decline?</li><li>Complete the sentence: “Taken together, these indicators point to…, although…”</li></ol></div>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Activity 4 · Build the story</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">From dashboard to narrative</h2>
+    <p style="margin-top:0;">Choose one dataset. Prepare a short narrative using the five-step structure below. You are not expected to explain every number—select the pattern that matters most.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0;">
+      <button type="button" class="datasetButton" data-dataset="delivery" style="border:1px solid #1a3d63;border-radius:999px;background:#1a3d63;color:#fff;padding:9px 15px;font-weight:bold;cursor:pointer;box-sizing:border-box;">Project delivery</button>
+      <button type="button" class="datasetButton" data-dataset="people" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:9px 15px;font-weight:bold;cursor:pointer;">Employee engagement</button>
+      <button type="button" class="datasetButton" data-dataset="service" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:9px 15px;font-weight:bold;cursor:pointer;">Customer support</button>
+    </div>
+    <div id="storyDataset" style="border:1px solid #dce4ed;border-radius:12px;padding:16px;background:#fbfdff;"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,175px),1fr));gap:10px;margin-top:14px;">
+      <div style="background:#eef4fa;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">1 · Context</strong><p style="font-size:14px;margin:5px 0 0;">What is being measured, and over what period?</p></div>
+      <div style="background:#eef4fa;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">2 · Main pattern</strong><p style="font-size:14px;margin:5px 0 0;">What changed or stands out?</p></div>
+      <div style="background:#eef4fa;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">3 · Turning point</strong><p style="font-size:14px;margin:5px 0 0;">When did the pattern shift?</p></div>
+      <div style="background:#eef4fa;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">4 · Interpretation</strong><p style="font-size:14px;margin:5px 0 0;">What might explain it? Qualify your claim.</p></div>
+      <div style="background:#eef4fa;border-radius:10px;padding:12px;"><strong style="color:#1a3d63;">5 · Implication</strong><p style="font-size:14px;margin:5px 0 0;">Why does it matter, and what should be checked next?</p></div>
+    </div>
+    <p style="margin-bottom:0;margin-top:13px;color:#526579;font-size:14px;"><strong>Challenge:</strong> use at least four target expressions, avoid all eight banned words, and include one sentence that distinguishes evidence from interpretation.</p>
+  </section>
+
+  <section style="background:#fff;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;box-shadow:0 4px 14px rgba(36,52,71,.04);">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Activity 5 · Final speaking challenge</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">The Executive Briefing</h2>
+    <p style="margin-top:0;">Generate a briefing card. Each student receives a different professional dataset and must present a concise, evidence-based story.</p>
+    <div style="border-left:4px solid #1a3d63;background:#eef4fa;border-radius:9px;padding:14px 16px;margin:14px 0;"><strong style="color:#1a3d63;">Speaking rules</strong><ul style="margin:7px 0 0;padding-left:22px;"><li>60 seconds to prepare; 90 seconds to present.</li><li>Use at least four target expressions naturally.</li><li>Avoid all eight banned words and phrases.</li><li>Identify one key pattern and one possible interpretation.</li><li>State what the data do not prove or what you would investigate next.</li></ul></div>
+    <div id="briefingCard" style="border:1px solid #cbd9e8;border-radius:14px;padding:18px;min-height:150px;background:#fbfdff;"><div style="font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#61758a;font-weight:bold;">Ready?</div><h3 style="margin:8px 0;color:#1a3d63;">Generate your briefing card</h3><p style="margin:0;color:#526579;">A new scenario will be selected for you.</p></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;"><button id="generateBriefing" type="button" style="border:0;border-radius:999px;background:#1a3d63;color:#fff;padding:12px 19px;font-size:15px;font-weight:bold;cursor:pointer;">Generate briefing card →</button><button id="showStoryFrames" type="button" style="border:1px solid #1a3d63;border-radius:999px;background:#fff;color:#1a3d63;padding:11px 17px;font-weight:bold;cursor:pointer;">Show useful sentence frames</button></div>
+    <div id="storyFrames" hidden style="margin-top:12px;padding:14px;background:#f2f0fb;border:1px solid #d9d2ed;border-radius:10px;"><strong style="color:#44366b;">Useful sentence frames</strong><ul style="margin-bottom:0;padding-left:22px;"><li>“What stands out is…”</li><li>“The most pronounced shift occurs…”</li><li>“This coincides with…, although the data do not establish…”</li><li>“Taken together, these indicators point to…”</li><li>“This cannot be attributed solely to…”</li><li>“The next step would be to establish whether…”</li></ul></div>
+    <p id="briefingRoundInfo" aria-live="polite" style="font-size:13px;color:#61758a;margin-bottom:0;margin-top:12px;">Seven briefing cards are available. The deck is shuffled and will be exhausted before cards are repeated.</p>
+  </section>
+
+  <section style="background:#f7f9fc;border:1px solid #dce4ed;border-radius:18px;padding:clamp(17px,3vw,24px);margin-bottom:22px;">
+    <div style="font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#61758a;font-weight:bold;">Final reflection</div>
+    <h2 style="margin:5px 0 8px;color:#1a3d63;font-size:clamp(22px,3vw,28px);">A data story is not a guess</h2>
+    <p style="margin-top:0;">Before you finish, answer these questions orally:</p>
+    <ol style="padding-left:22px;margin-bottom:0;"><li>Which expression helped you describe the data more precisely?</li><li>Where were you tempted to infer a cause that the data did not establish?</li><li>What additional evidence would make your narrative more convincing?</li></ol>
+  </section>
+
+  <footer style="text-align:center;padding:18px 12px;color:#526579;font-size:13px;">
+    <img src="https://campus.pharoenglish.com/pluginfile.php/1/theme_moove/logo/1786309964/Logo%20Pharo.png" alt="Pharo English Academy" style="display:block;width:150px;max-width:65%;height:auto;margin:0 auto 10px;">
+    <div style="font-weight:bold;color:#1a3d63;">Pharo English Academy</div>
+    <div>Advanced English · C2.2</div>
+  </footer>
+</div>
+<script>
+(function(){
+  const vocabQuestions = [
+    {q:'After three quarters of relatively flat performance, sales rose sharply in Q4.',opts:['dip','surge','level off'],a:'surge',why:'“Surge” describes a sudden, substantial upward movement.'},
+    {q:'The figure fell slightly in May before recovering in June.',opts:['plummet','dip','outpace'],a:'dip',why:'“Dip” suggests a relatively small or temporary fall.'},
+    {q:'The two indicators rose and fell irregularly throughout the year.',opts:['fluctuate','account for','level off'],a:'fluctuate',why:'“Fluctuate” describes irregular movement in both directions.'},
+    {q:'After months of growth, demand stopped increasing and remained stable.',opts:['stand out','level off','plummet'],a:'level off',why:'“Level off” means that movement settles into a stable pattern.'},
+    {q:'Online sales grew faster than in-store sales.',opts:['lag behind','coincide with','outpace'],a:'outpace',why:'“Outpace” compares rates of growth or progress.'},
+    {q:'The support team’s response time improved, but its satisfaction score continued to ___ the target.',opts:['lag behind','surge','account for'],a:'lag behind',why:'“Lag behind” highlights slower progress or underperformance relative to a benchmark.'},
+    {q:'The North region represents 42% of all new subscriptions.',opts:['points to','accounts for','stands out'],a:'accounts for',why:'“Account for” describes a share or proportion of a total.'},
+    {q:'The decline began in the same month as the policy change, but there is no evidence that the policy caused it.',opts:['coincided with','outpaced','plummeted'],a:'coincided with',why:'“Coincided with” describes timing without claiming causation.'},
+    {q:'One figure is especially noticeable because it differs from the overall pattern.',opts:['stands out','levels off','accounts for'],a:'stands out',why:'“Stand out” signals a particularly noticeable feature.'},
+    {q:'The available indicators suggest that the issue may involve more than one factor.',opts:['point to','dip','lag behind'],a:'point to',why:'“Point to” introduces a possible interpretation supported by the evidence.'}
+  ];
+  const vocabOptions = ['surge','dip','plummet','level off','outpace','lag behind','fluctuate','account for','stand out','coincide with','point to','cannot be attributed solely to'];
+  function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  let quizOrder=[];
+  function renderQuiz(){
+    quizOrder=shuffle(vocabQuestions);
+    // Balance the answer key across the three displayed positions (A/B/C).
+    // With ten questions, the correct answer appears 4, 3 and 3 times across the slots.
+    const correctSlots=shuffle([0,0,0,0,1,1,1,2,2,2]);
+    document.getElementById('vocabQuiz').innerHTML=quizOrder.map((item,i)=>{
+      const correct=item.a;
+      const distractors=shuffle(item.opts.filter(o=>o!==correct));
+      const opts=distractors.slice();
+      opts.splice(correctSlots[i],0,correct);
+      return '<div data-q="'+i+'" style="border:1px solid #dce4ed;border-radius:12px;padding:14px;background:#fbfdff;"><p style="margin:0 0 10px;"><strong style="color:#1a3d63;">'+(i+1)+'.</strong> '+esc(item.q)+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;">'+opts.map(o=>'<label style="display:flex;align-items:center;gap:6px;border:1px solid #dce4ed;border-radius:999px;padding:7px 11px;background:#fff;cursor:pointer;max-width:100%;"><input type="radio" name="vq'+i+'" value="'+esc(o)+'"><span>'+esc(o)+'</span></label>').join('')+'</div><div class="qfeedback" aria-live="polite" style="margin-top:8px;font-size:13px;"></div></div>';
+    }).join('');
+    document.getElementById('vocabQuizFeedback').innerHTML='';
+  }
+  document.getElementById('checkVocabQuiz').addEventListener('click',()=>{
+    let score=0,answered=0;
+    quizOrder.forEach((item,i)=>{const chosen=document.querySelector('input[name="vq'+i+'"]:checked');const box=document.querySelector('#vocabQuiz [data-q="'+i+'"] .qfeedback');if(!chosen){box.innerHTML='<span style="color:#9a6700;">Choose an answer.</span>';return;}answered++;if(chosen.value===item.a){score++;box.innerHTML='<span style="color:#166534;font-weight:bold;">Correct.</span> '+esc(item.why);}else{box.innerHTML='<span style="color:#9c3029;font-weight:bold;">Not quite.</span> Best answer: <strong>'+esc(item.a)+'</strong>. '+esc(item.why);}});
+    document.getElementById('vocabQuizFeedback').innerHTML='<div style="padding:12px;border-radius:10px;background:#eef4fa;color:#1a3d63;"><strong>Score: '+score+' / '+quizOrder.length+'</strong><div style="font-size:13px;margin-top:3px;">Answered: '+answered+' of '+quizOrder.length+'. Review the explanations before trying again.</div></div>';
+  });
+  document.getElementById('resetVocabQuiz').addEventListener('click',renderQuiz);
+  const precisionKey = [
+    {answer:'surged',why:'“Surged” describes a sharp, substantial rise.'},
+    {answer:'dipped',why:'“Dipped” describes a slight, often temporary fall; “plummeted” would imply a much steeper drop.'},
+    {answer:'outpaced',why:'“Outpaced” means that one measure grew or progressed faster than another.'},
+    {answer:'fluctuated',why:'“Fluctuated” describes repeated movement up and down without a consistent direction.'},
+    {answer:'coincided with',why:'“Coincided with” describes two events occurring at the same time without claiming that one caused the other.'},
+    {answer:'accounted for',why:'“Accounted for” describes the share or proportion that something represents within a total.'}
+  ];
+  document.getElementById('checkPrecisionDropdowns').addEventListener('click',()=>{
+    let score=0,answered=0;
+    precisionKey.forEach((item,i)=>{
+      const select=document.getElementById('precision'+String.fromCharCode(65+i));
+      const box=document.querySelector('[data-pq="'+i+'"] .precisionFeedback');
+      if(!select.value){box.innerHTML='<span style="color:#9a6700;font-weight:bold;">Choose an option.</span>';return;}
+      answered++;
+      if(select.value===item.answer){score++;box.innerHTML='<span style="color:#166534;font-weight:bold;">Correct.</span> '+esc(item.why);}
+      else{box.innerHTML='<span style="color:#9c3029;font-weight:bold;">Not quite.</span> Best answer: <strong>'+esc(item.answer)+'</strong>. '+esc(item.why);}
+    });
+    document.getElementById('precisionDropdownSummary').innerHTML='<div style="padding:12px;border-radius:10px;background:#eef4fa;color:#1a3d63;"><strong>Score: '+score+' / 6</strong><div style="font-size:13px;margin-top:3px;">Answered: '+answered+' of 6. Review the explanations and try again if needed.</div></div>';
+  });
+  document.getElementById('resetPrecisionDropdowns').addEventListener('click',()=>{
+    ['A','B','C','D','E','F'].forEach(letter=>{document.getElementById('precision'+letter).value='';});
+    document.querySelectorAll('#precisionDropdowns .precisionFeedback').forEach(el=>el.innerHTML='');
+    document.getElementById('precisionDropdownSummary').innerHTML='';
+  });
+  document.getElementById('checkDashboard').addEventListener('click',()=>{
+    const chosen=document.querySelector('input[name="dashboardChoice"]:checked');const f=document.getElementById('dashboardFeedback');
+    if(!chosen){f.innerHTML='<div style="padding:12px;border-radius:9px;background:#fffbeb;border:1px solid #f0d9a5;">Choose an interpretation first.</div>';return;}
+    if(chosen.value==='B')f.innerHTML='<div style="padding:13px;border-radius:9px;background:#f0fdf4;border:1px solid #86c99b;"><strong style="color:#166534;">Correct — this stays within the evidence.</strong><p style="margin:5px 0 0;">It describes the two patterns accurately and avoids claiming that one caused the other. Additional evidence would be needed to explain the relationship.</p></div>';
+    else f.innerHTML='<div style="padding:13px;border-radius:9px;background:#fff1f0;border:1px solid #f0c8c4;"><strong style="color:#9c3029;">Not quite.</strong><p style="margin:5px 0 0;">The dashboard shows that revenue increased while retention declined, but it does not establish why either pattern occurred. Avoid turning timing or correlation into proof of cause.</p></div>';
+  });
+  const datasets={
+    delivery:{title:'Project delivery · On-time completion',context:'Percentage of milestones delivered on schedule across four quarters.',metrics:[['On-time delivery','91% → 88% → 80% → 84%'],['Rework rate','6% → 7% → 12% → 9%'],['Scope changes','12 → 15 → 23 → 18']],story:'On-time delivery dipped in Q3 as scope changes and rework peaked; both delivery and rework partially recovered in Q4. The pattern points to a possible relationship, but it does not establish what caused the Q3 deterioration.'},
+    people:{title:'Employee engagement · Quarterly pulse',context:'Survey engagement score and voluntary turnover across four quarters.',metrics:[['Engagement score','78 → 76 → 70 → 72'],['Voluntary turnover','8% → 9% → 13% → 11%'],['Survey response rate','82% → 80% → 68% → 74%']],story:'Engagement declined through Q3 before a modest rebound in Q4, while turnover peaked in Q3. The lower survey response rate complicates interpretation: the available figures may not fully represent the workforce.'},
+    service:{title:'Customer support · Service performance',context:'Monthly service indicators grouped by quarter.',metrics:[['Tickets resolved','4,200 → 4,500 → 4,700 → 5,600'],['First-response time','3.2h → 3.4h → 4.1h → 2.8h'],['Satisfaction','91% → 89% → 85% → 90%']],story:'Ticket volume rose throughout the period, while first-response time and satisfaction deteriorated before improving in Q4. The recovery coincides with the higher ticket volume, but the dashboard does not reveal which operational changes, if any, drove the improvement.'}
+  };
+  function renderDataset(key){const d=datasets[key];document.getElementById('storyDataset').innerHTML='<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#61758a;font-weight:bold;">Fictional dataset</div><h3 style="margin:5px 0;color:#1a3d63;">'+esc(d.title)+'</h3><p style="margin-top:0;">'+esc(d.context)+'</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:9px;">'+d.metrics.map(m=>'<div style="background:#eef4fa;border-radius:9px;padding:12px;"><div style="font-size:12px;color:#526579;">'+esc(m[0])+'</div><strong style="display:block;color:#1a3d63;margin-top:4px;overflow-wrap:anywhere;">'+esc(m[1])+'</strong></div>').join('')+'</div><details style="margin-top:12px;"><summary style="cursor:pointer;color:#1a3d63;font-weight:bold;">Reveal a possible interpretation</summary><p style="margin-bottom:0;">'+esc(d.story)+'</p><p style="font-size:13px;color:#526579;margin-bottom:0;">Use this only after students have developed their own narrative.</p></details>';
+    document.querySelectorAll('.datasetButton').forEach(b=>{const active=b.dataset.dataset===key;b.style.background=active?'#1a3d63':'#fff';b.style.color=active?'#fff':'#1a3d63';b.style.border='1px solid #1a3d63';b.style.boxSizing='border-box';});}
+  document.querySelectorAll('.datasetButton').forEach(b=>b.addEventListener('click',()=>renderDataset(b.dataset.dataset)));
+  document.getElementById('showStoryFrames').addEventListener('click',()=>{const el=document.getElementById('storyFrames');el.hidden=!el.hidden;document.getElementById('showStoryFrames').textContent=el.hidden?'Show useful sentence frames':'Hide useful sentence frames';});
+  const briefings=[
+    {title:'A growth story with a warning sign',context:'Revenue rose from $1.8m to $2.6m over four quarters. Customer retention fell from 87% to 78%. New customer acquisition increased in every quarter.',task:'Explain the contrasting trends. What stands out, what might the figures point to, and what further evidence would you request?'},
+    {title:'The late-quarter recovery',context:'On-time project delivery fell from 92% to 76% by Q3, then recovered to 85% in Q4. Rework also fell from 14% to 9% in Q4.',task:'Build a story around the turning point. Describe the pattern without assuming what caused the recovery.'},
+    {title:'More activity, less satisfaction',context:'Monthly customer contacts increased by 35%. Average response time lengthened from 2.5 hours to 4.2 hours, while satisfaction fell from 90% to 82%.',task:'Explain the relationship among the indicators and identify the most important unanswered question.'},
+    {title:'The metric that stands out',context:'Three regions recorded steady growth of 4–6%. One region grew by 19%, but its customer retention was the lowest in the company.',task:'Present the outlier and discuss at least two possible interpretations without treating either as proven.'},
+    {title:'An improvement with a caveat',context:'Employee engagement rose from 68 to 74 points after a new internal initiative. However, survey response rates fell from 81% to 59%.',task:'Tell a balanced story about the apparent improvement and explain how the response-rate change affects confidence.'},
+    {title:'Stable totals, shifting mix',context:'Total sales remained close to $4m in each quarter. Subscription revenue grew from 45% to 63% of the total, while one-off sales declined.',task:'Explain what the stable headline figure conceals and why the changing composition may matter.'},
+    {title:'A spike that did not last',context:'Website traffic surged by 70% in Q2, then returned close to its previous level in Q3. Qualified leads increased only 5% over the same period.',task:'Describe the spike, compare traffic with qualified leads, and explain what the data cannot tell you about the source or quality of the traffic.'}
+  ];
+  let briefingDeck=[];
+  document.getElementById('generateBriefing').addEventListener('click',()=>{
+    if(!briefingDeck.length)briefingDeck=shuffle(briefings);
+    const b=briefingDeck.pop();
+    document.getElementById('briefingCard').innerHTML='<div style="font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#61758a;font-weight:bold;">Your executive briefing</div><h3 style="font-size:22px;line-height:1.3;margin:8px 0;color:#1a3d63;">'+esc(b.title)+'</h3><p style="margin:0 0 12px;">'+esc(b.context)+'</p><div style="background:#eef4fa;border-radius:9px;padding:12px;"><strong style="color:#1a3d63;">Your task</strong><p style="margin:5px 0 0;">'+esc(b.task)+'</p></div>';
+    document.getElementById('briefingRoundInfo').textContent=briefingDeck.length+' of 7 cards remain before the deck is reshuffled.';
+  });
+  renderQuiz();renderDataset('delivery');
+})();
+</script>
+</body>
+</html>
