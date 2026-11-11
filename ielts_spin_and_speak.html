@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking — Spin & Speak</title>
+<style>
+  :root{--navy:#173b60;--blue:#28679a;--sky:#eaf3fa;--ink:#1e293b;--muted:#64748b;--gold:#f4c95d}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#f4f8fc,#e8f0f7);color:var(--ink);min-height:100vh;padding:28px 16px}
+  .app{max-width:980px;margin:0 auto}
+  header{text-align:center;margin-bottom:24px}
+  .eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:800}
+  h1{margin:8px 0 6px;color:var(--navy);font-size:clamp(2rem,5vw,3.2rem)}
+  header p{margin:0;color:var(--muted)}
+  .layout{display:grid;grid-template-columns:minmax(280px,1fr) minmax(300px,1fr);gap:22px;align-items:stretch}
+  .panel{background:#fff;border:1px solid #dce6ef;border-radius:22px;padding:22px;box-shadow:0 12px 35px #173b6010}
+  .wheel-area{display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .wheel-wrap{position:relative;width:min(100%,390px);aspect-ratio:1;margin:4px auto 18px}
+  canvas{width:100%;height:100%;display:block}
+  .pointer{position:absolute;z-index:2;top:-5px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:17px solid transparent;border-right:17px solid transparent;border-top:34px solid var(--navy);filter:drop-shadow(0 3px 2px #0002)}
+  .hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:#fff;border:7px solid var(--navy);display:grid;place-items:center;color:var(--navy);font-weight:900;box-shadow:0 3px 12px #0002}
+  button{border:0;border-radius:12px;padding:13px 20px;font-weight:800;font-size:1rem;cursor:pointer;transition:.2s}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .primary{background:var(--navy);color:white;box-shadow:0 5px 0 #0d2945}
+  .primary:hover:not(:disabled){background:var(--blue);transform:translateY(-1px)}
+  .secondary{background:var(--sky);color:var(--navy)}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .hint{font-size:.85rem;color:var(--muted);text-align:center;margin:14px 0 0}
+  .question-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;color:var(--blue);font-weight:800}
+  .question{font-size:1.45rem;line-height:1.45;font-weight:750;color:var(--navy);margin:12px 0 18px;min-height:145px}
+  .empty{color:#94a3b8;font-weight:500}
+  .timerbox{background:var(--sky);border-radius:16px;padding:15px;margin:12px 0 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .timer{font-size:2rem;font-variant-numeric:tabular-nums;font-weight:850;color:var(--navy)}
+  .timer-actions{display:flex;gap:8px}
+  .timer-actions button{padding:9px 12px;font-size:.85rem}
+  label{display:block;font-weight:750;color:var(--navy);margin:12px 0 8px}
+  textarea{width:100%;min-height:125px;resize:vertical;border:1px solid #cbd8e4;border-radius:12px;padding:12px;font:inherit;line-height:1.5;outline:none}
+  textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #28679a20}
+  .note{font-size:.82rem;color:var(--muted);margin-top:8px}
+  .footer{margin:22px 0 0;text-align:center;color:var(--muted);font-size:.82rem}
+  @media(max-width:760px){body{padding:20px 12px}.layout{grid-template-columns:1fr}.panel{padding:18px}.question{min-height:0}.wheel-wrap{max-width:330px}}
+</style>
+</head>
+<body>
+<main class="app">
+  <header>
+    <div class="eyebrow">IELTS Speaking · Band 9 Challenge</div>
+    <h1>Spin &amp; Speak</h1>
+    <p>Spin the wheel, get a thought-provoking question, and speak for two minutes.</p>
+  </header>
+  <section class="layout">
+    <div class="panel wheel-area">
+      <div class="wheel-wrap">
+        <div class="pointer"></div>
+        <canvas id="wheel" width="700" height="700" aria-label="Question spinning wheel"></canvas>
+        <div class="hub">IELTS</div>
+      </div>
+      <div class="controls">
+        <button class="primary" id="spinBtn">SPIN THE WHEEL</button>
+        <button class="secondary" id="nextBtn">Next question</button>
+      </div>
+      <p class="hint">The wheel contains 30 discussion questions across six themes.</p>
+    </div>
+    <div class="panel">
+      <div class="question-label">Your speaking question</div>
+      <div class="question empty" id="question">Your question will appear here. Spin the wheel to begin.</div>
+      <div class="timerbox">
+        <div><div class="question-label">Speaking time</div><div class="timer" id="timer">02:00</div></div>
+        <div class="timer-actions">
+          <button class="secondary" id="startTimer">Start</button>
+          <button class="secondary" id="resetTimer">Reset</button>
+        </div>
+      </div>
+      <label for="answer">Plan your answer / note key ideas</label>
+      <textarea id="answer" placeholder="Jot down a few keywords. Then speak without reading a prepared script..."></textarea>
+      <div class="note">There is no single correct answer. Support your position with reasoning, examples, counterarguments and a clear conclusion.</div>
+    </div>
+  </section>
+  <p class="footer">Preparation: 30 seconds · Speaking: 2 minutes · Aim for clarity, nuance and natural fluency.</p>
+</main>
+<script>
+const questions = [
+"To what extent has modern society become more individualistic, and what are the long-term implications of this shift?",
+"Are people today genuinely more open-minded than previous generations, or have social expectations simply changed?",
+"Is the pursuit of happiness making people less satisfied with their lives? Why or why not?",
+"How much responsibility should individuals take for addressing problems that are fundamentally systemic?",
+"Has social status become more important than personal fulfilment in contemporary society?",
+"Could widespread artificial intelligence undermine people's ability to think independently?",
+"To what extent should technological progress be restricted when it conflicts with ethical considerations?",
+"Has social media fundamentally changed how people perceive reality, or merely amplified existing tendencies?",
+"Should people be held accountable for decisions made by algorithms they neither understand nor control?",
+"Is technological convenience gradually making human beings less resilient?",
+"Should educational institutions prioritise critical thinking over the acquisition of factual knowledge?",
+"To what extent does academic success reflect genuine intelligence rather than an ability to adapt to an educational system?",
+"Is traditional education becoming increasingly irrelevant in a world where information is readily accessible?",
+"Should universities prepare students for the labour market or encourage intellectual independence?",
+"Can creativity be systematically taught, or does formal education tend to restrict it?",
+"Has the concept of professional success become distorted by society's obsession with productivity?",
+"Should people pursue financially secure careers even if they offer little personal fulfilment?",
+"Is work-life balance an individual responsibility or an obligation of employers?",
+"Is ambition inherently positive, or can it become destructive when taken to extremes?",
+"Will the traditional concept of a lifelong career eventually disappear?",
+"Should freedom of expression have limitations when opinions could potentially cause social harm?",
+"Is it morally acceptable for wealthy countries to prioritise their own citizens when dealing with global crises?",
+"To what extent should future generations have a say in decisions made by governments today?",
+"Can economic development ever justify environmental degradation?",
+"Is civil disobedience sometimes necessary to achieve meaningful social change?",
+"Is ignorance sometimes preferable to knowledge when the truth is psychologically damaging?",
+"To what extent are human beings genuinely in control of their own decisions?",
+"Can an individual live an authentic life while constantly adapting to society's expectations?",
+"Is failure an essential component of personal growth, or do we simply romanticise disappointment?",
+"If everyone had access to exactly the same opportunities, would society necessarily become more equal?"
+];
+const colors=["#173b60","#28679a","#4b86ad","#7ba9c7","#d5a83f","#9b789c"];
+const canvas=document.getElementById("wheel"),ctx=canvas.getContext("2d");
+const n=questions.length, arc=2*Math.PI/n, cx=350,cy=350,r=330;
+let rotation=0,spinning=false,current=-1,timerSeconds=120,interval=null;
+function draw(){
+ ctx.clearRect(0,0,700,700);
+ for(let i=0;i<n;i++){
+  const start=rotation+i*arc-Math.PI/2,end=start+arc;
+  ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,start,end);ctx.closePath();
+  ctx.fillStyle=colors[Math.floor(i/5)%colors.length];ctx.fill();
+  ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();
+  ctx.save();ctx.translate(cx,cy);ctx.rotate(start+arc/2);
+  ctx.textAlign="right";ctx.fillStyle="#fff";ctx.font="bold 18px Arial";
+  ctx.fillText(String(i+1),r-22,6);ctx.restore();
+ }
+ ctx.beginPath();ctx.arc(cx,cy,r,0,2*Math.PI);ctx.strokeStyle="#fff";ctx.lineWidth=9;ctx.stroke();
+}
+function showQuestion(index){
+ current=index;const el=document.getElementById("question");
+ el.textContent=questions[index];el.classList.remove("empty");
+ document.getElementById("answer").value="";
+ resetTimer();
+}
+function spin(){
+ if(spinning)return;spinning=true;
+ document.getElementById("spinBtn").disabled=true;
+ const targetIndex=Math.floor(Math.random()*n);
+ const currentAngle=((rotation%(2*Math.PI))+2*Math.PI)%(2*Math.PI);
+ const desired=(-Math.PI/2-(targetIndex+.5)*arc+2*Math.PI*4);
+ const extra=6*Math.PI+((desired-currentAngle)%(2*Math.PI)+2*Math.PI)%(2*Math.PI);
+ const start=rotation,duration=4300,begin=performance.now();
+ function animate(now){
+  const t=Math.min(1,(now-begin)/duration),ease=1-Math.pow(1-t,4);
+  rotation=start+extra*ease;draw();
+  if(t<1)requestAnimationFrame(animate);
+  else{rotation=rotation%(2*Math.PI);draw();showQuestion(targetIndex);spinning=false;document.getElementById("spinBtn").disabled=false;}
+ }
+ requestAnimationFrame(animate);
+}
+function nextQuestion(){let i;do{i=Math.floor(Math.random()*n)}while(n>1&&i===current);showQuestion(i);}
+function renderTimer(){
+ const m=Math.floor(timerSeconds/60),s=timerSeconds%60;
+ document.getElementById("timer").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+}
+function resetTimer(){clearInterval(interval);interval=null;timerSeconds=120;renderTimer();document.getElementById("startTimer").textContent="Start";}
+document.getElementById("spinBtn").addEventListener("click",spin);
+document.getElementById("nextBtn").addEventListener("click",nextQuestion);
+document.getElementById("startTimer").addEventListener("click",()=>{
+ if(interval){clearInterval(interval);interval=null;document.getElementById("startTimer").textContent="Resume";return;}
+ if(timerSeconds<=0)return;
+ document.getElementById("startTimer").textContent="Pause";
+ interval=setInterval(()=>{timerSeconds--;renderTimer();if(timerSeconds<=0){clearInterval(interval);interval=null;document.getElementById("startTimer").textContent="Time's up";}},1000);
+});
+document.getElementById("resetTimer").addEventListener("click",resetTimer);
+draw();renderTimer();
+</script>
+</body>
+</html>
